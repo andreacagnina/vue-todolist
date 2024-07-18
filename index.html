@@ -34,16 +34,24 @@
                     <div class="content">
                         <ul class="list-group">
 
-                            <li v-for="index in toDoArray"
+                            <li v-for="(obj, index) in toDoArray"
                                 class="list-group-item list-group-item-action d-flex justify-content-between">
-                                <div :class="(index.done == true)?'text-decoration-line-through' :''">{{index.activity}}
+                                <div :class="(obj.done == true)?'text-decoration-line-through' :''">{{obj.activity}}
                                 </div>
 
                                 <div @click="deleteItem(index)"><i class="fa-regular fa-circle-xmark"></i></div>
                             </li>
 
+                            <div class="input-group my-3">
+                                <input v-model="AddNewToDo" class="form-control"
+                                    placeholder="Aggiungi una nuova attività" type="text" name="newtodo" id="newtodo"
+                                    required>
+                                <div class="input-group-text" @click="addItem()"><i class="fa-regular fa-circle-up"></i>
+                                </div>
+                            </div>
                     </div>
                 </div>
+
 
             </div>
         </div>

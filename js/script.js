@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
+            activityName: null,
 
             toDoArray: [
                 {
@@ -27,6 +28,22 @@ const app = Vue.createApp({
             ]
 
         }
+    },
+    methods: {
+        deleteItem(i) {
+            this.toDoArray.splice(i, 1);
+        },
+        addItem() {
+            if (this.AddNewToDo != null) {
+                let newIndex = {
+                    activity: this.AddNewToDo,
+                    done: false,
+                }
+                this.toDoArray.push(newIndex)
+                this.AddNewToDo = null
+            }
+        }
+
     }
 })
 
