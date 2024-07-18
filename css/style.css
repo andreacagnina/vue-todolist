@@ -1,7 +1,8 @@
 li.list-group-item:hover {
-    cursor: progress;
+    cursor: default;
 }
 
-li.text-decoration-line-through:hover {
-    cursor: not-allowed;
+i:hover,
+li i:hover {
+    cursor: pointer;
 }
