@@ -45,13 +45,15 @@
                             <div class="input-group my-3">
                                 <input v-model="AddNewToDo" class="form-control"
                                     placeholder="Aggiungi una nuova attività" type="text" name="newtodo" id="newtodo"
-                                    required @keydown.enter="addItem()">
+                                    @keyup.enter="addItem()">
+
                                 <div class="input-group-text" @click="addItem()"><i class="fa-regular fa-circle-up"></i>
                                 </div>
+
                             </div>
+                        </ul>
                     </div>
                 </div>
-
 
             </div>
         </div>
