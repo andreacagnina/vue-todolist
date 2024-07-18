@@ -44,7 +44,6 @@ const app = Vue.createApp({
                 (this.toDoArray[i].done = true) :
                 (this.toDoArray[i].done = false)
         }
-
     }
 })
 
