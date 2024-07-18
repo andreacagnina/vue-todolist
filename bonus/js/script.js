@@ -1,7 +1,6 @@
 const app = Vue.createApp({
     data() {
         return {
-
             toDoArray: [
                 {
                     activity: 'Spolverare',
@@ -23,9 +22,7 @@ const app = Vue.createApp({
                     activity: 'Avviare la lavatrice',
                     done: false
                 },
-
             ]
-
         }
     },
     methods: {
@@ -41,6 +38,12 @@ const app = Vue.createApp({
                 this.toDoArray.push(newIndex)
                 this.AddNewToDo = null
             }
+        },
+        changeStatus(i) {
+            (this.toDoArray[i].done == false) ?
+                (this.toDoArray[i].done = true) :
+                (this.toDoArray[i].done = false)
+
         }
 
     }

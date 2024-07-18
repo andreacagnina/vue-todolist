@@ -34,7 +34,7 @@
                     <div class="content">
                         <ul class="list-group">
 
-                            <li v-for="(obj, index) in toDoArray"
+                            <li v-for="(obj, index) in toDoArray" @click="changeStatus(index)"
                                 class="list-group-item list-group-item-action d-flex justify-content-between">
                                 <div :class="(obj.done == true)?'text-decoration-line-through' :''">{{obj.activity}}
                                 </div>
