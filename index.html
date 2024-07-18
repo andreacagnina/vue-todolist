@@ -39,7 +39,7 @@
                                 <div :class="(index.done == true)?'text-decoration-line-through' :''">{{index.activity}}
                                 </div>
 
-                                <div><i class="fa-regular fa-circle-xmark"></i></div>
+                                <div @click="deleteItem(index)"><i class="fa-regular fa-circle-xmark"></i></div>
                             </li>
 
                     </div>
