@@ -1,25 +1,26 @@
 const app = Vue.createApp({
     data() {
         return {
+
             toDoArray: [
                 {
-                    activity: '',
+                    activity: 'Spolverare',
+                    done: true
+                },
+                {
+                    activity: "Passare l'aspirapolvere",
                     done: false
                 },
                 {
-                    activity: '',
+                    activity: 'Passare lo straccio',
                     done: false
                 },
                 {
-                    activity: '',
-                    done: false
+                    activity: 'Svuotare la lavastoviglie',
+                    done: true
                 },
                 {
-                    activity: '',
-                    done: false
-                },
-                {
-                    activity: '',
+                    activity: 'Avviare la lavatrice',
                     done: false
                 },
 

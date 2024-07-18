@@ -33,7 +33,9 @@
                 <div class="col-6 offset-3">
                     <div class="content">
                         <ul class="list-group">
-                            <li class="list-group-item">An item</li>
+                            <li v-for="index in toDoArray" class="list-group-item"
+                                :class="(index.done == true)?'text-decoration-line-through' :''">
+                                {{index.activity}}</li>
                     </div>
                 </div>
 
